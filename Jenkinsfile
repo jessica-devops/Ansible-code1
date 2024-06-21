@@ -10,9 +10,9 @@ pipeline{
         }
         stage('upload artifacts to jfrog'){
             steps{
-                sh 'curl -uadmin:AP8gcgmmset5jeYChTJYDN6XmDd -T \
-                ansible-${BUILD_ID}.zip \
-                "http://34.201.161.49:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
+                sh 'curl -uadmin:AP9StpACNZq5WxdF6DetHmjiFdu -T \
+                 <PATH_TO_FILE> \
+                 "http://100.25.190.251:8081/artifactory/Ansible/<TARGET_FILE_PATH>""'
             }
         }
         stage('publish to ansible server'){
