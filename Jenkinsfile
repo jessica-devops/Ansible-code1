@@ -11,8 +11,8 @@ pipeline{
         stage('upload artifacts to jfrog'){
             steps{
                 sh 'curl -uadmin:AP9StpACNZq5WxdF6DetHmjiFdu -T \
-                 <PATH_TO_FILE> \
-                 "http://100.25.190.251:8081/artifactory/Ansible/<TARGET_FILE_PATH>""'
+                 ansible-${BUILD_ID}.zip \
+                 "http://100.25.190.251:8081/artifactory/Ansible/ansible-${BUILD_ID}.zip""'
             }
         }
         stage('publish to ansible server'){
